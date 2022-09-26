@@ -23,7 +23,7 @@ public class CarQueryController {
         this.carQueryService = carQueryService;
     }
 
-    @GetMapping
+    @GetMapping("/brand/{brand}")
     private List<CarIdColorDTO> retrieveCardByBrandQuery(@PathVariable String brand){
         return this.carQueryService.findAllCarIdColorByBrand(new CarsByBrand(brand));
     }
